@@ -1,0 +1,36 @@
+/* Set the container's size and alignment */
+.home-container {
+  position: relative;
+  width: 100%;
+  height: 100vh; /* Adjust the height as needed */
+  overflow: hidden;
+  border-radius: 5px;
+}
+
+/* Background image styling */
+.img-bg {
+  background: url(../assets/lost1.jpeg) no-repeat center center;
+  background-size: cover;
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+/* Description text overlay */
+.description {
+  position: absolute;
+  top: 15%; /* Center the content vertically */
+  left: 50%; /* Center the content horizontally */
+  transform: translate(-50%, -50%);
+  color: white;
+  text-align: center;
+  background-color: rgba(
+    0,
+    0,
+    0,
+    0.5
+  ); /* Optional: semi-transparent background */
+  padding: 20px;
+  border-radius: 8px; /* Optional: rounded corners */
+}
+/*  */
