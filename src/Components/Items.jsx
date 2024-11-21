@@ -10,6 +10,8 @@ import lost6 from "../assets/lost6.jpeg";
 import lost7 from "../assets/lost7.jpeg";
 import lost8 from "../assets/lost8.jpeg";
 import lost9 from "../assets/lost9.jpg";
+import { Link } from "react-router-dom";
+import { Nav } from "react-bootstrap";
 
 function Items() {
   const currentDate = new Date();
@@ -24,49 +26,49 @@ function Items() {
       image: lost2,
       title: "Bike",
       description: "Lost",
-      dateFound: formattedDate,
+      dateFound: Date(),
     },
     {
       image: lost3,
       title: "Shoes",
       description: "Lost",
-      dateFound: formattedDate,
+      dateFound: Date(),
     },
     {
       image: lost4,
       title: "Bike",
       description: "Lost",
-      dateFound: formattedDate,
+      dateFound: Date(),
     },
     {
       image: lost5,
       title: "Bike",
       description: "Lost",
-      dateFound: formattedDate,
+      dateFound: Date(),
     },
     {
       image: lost6,
       title: "Bike",
       description: "Lost",
-      dateFound: formattedDate,
+      dateFound: Date(),
     },
     {
       image: lost7,
       title: "Bike",
       description: "Lost",
-      dateFound: formattedDate,
+      dateFound: Date(),
     },
     {
       image: lost8,
       title: "Bike",
       description: "Lost",
-      dateFound: formattedDate,
+      dateFound: Date(),
     },
     {
       image: lost9,
       title: "Bike",
       description: "Lost",
-      dateFound: formattedDate,
+      dateFound: Date(),
     },
   ];
   return (
@@ -88,9 +90,7 @@ function Items() {
               <Card.Text>{card.description}</Card.Text>
               <Card.Text>{card.dateFound}</Card.Text>
 
-              <Button variant="primary" style={{ backgroundColor: "green" }}>
-                Claim Item
-              </Button>
+              <Button variant="primary">Claim Item</Button>
             </Card.Body>
           </Card>
         ))}

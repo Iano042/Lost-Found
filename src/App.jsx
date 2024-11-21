@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import Items from "./Components/Items";
 import Footer from "./Components/Footer";
 import PostItem from "./Components/PostItem";
+import ClaimItem from "./Components/ClaimItem";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
         <Route path="/" element={<Home />} />
         <Route path="/items" element={<Items />} />
         <Route path="/post" element={<PostItem />} />
+        <Route path="/claimItem" element={<ClaimItem />} />
       </Routes>
       <Footer />
     </Router>

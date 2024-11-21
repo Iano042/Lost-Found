@@ -9,7 +9,7 @@ function Header() {
     <div className="header">
       <Navbar bg="dark" data-bs-theme="dark">
         <Container>
-          <Navbar.Brand to="/">L & F</Navbar.Brand>
+          <Navbar.Brand to="/">FoundIt Hub</Navbar.Brand>
           <Nav className="d-flex justify-content-center ms-auto ">
             <Nav.Link as={Link} to="/">
               Home
@@ -17,8 +17,8 @@ function Header() {
             <Nav.Link as={Link} to="/Items">
               Find Items
             </Nav.Link>
-            <Nav.Link as={Link} to="/Contact">
-              Contact
+            <Nav.Link as={Link} to="/postItem">
+              Post Item
             </Nav.Link>
           </Nav>
         </Container>
