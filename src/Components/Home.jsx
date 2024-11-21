@@ -2,6 +2,7 @@ import Button from "react-bootstrap/Button";
 import React from "react";
 import { useNavigate } from "react-router-dom";
 import "./Style.css";
+
 function Home() {
   const navigate = useNavigate();
 
@@ -12,20 +13,18 @@ function Home() {
           <h1>Description:</h1>
           <p>Post and Claim Lost Items</p>
         </div>
-        <div className="button d-flex justify-content-md-evenly ">
+        <div className="buttonHome d-flex justify-content-md-evenly">
           <Button
+            style={{ marginTop: "200px" }}
             variant="primary"
             size="lg"
             active
-            onClick={function () {
-              navigate("/Post");
-            }}
+            onClick={() => navigate("/Post")}
           >
             Post Item
           </Button>
-          <Button variant="secondary" size="lg" active>
-            Find Item
-          </Button>
+          
+          
         </div>
       </div>
     </div>

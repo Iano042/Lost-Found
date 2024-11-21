@@ -12,61 +12,72 @@ import lost8 from "../assets/lost8.jpeg";
 import lost9 from "../assets/lost9.jpg";
 
 function Items() {
+  const currentDate = new Date();
+
+  const day = currentDate.getDate();
+  const month = currentDate.getMonth() + 1;
+  const year = currentDate.getFullYear();
+
+  const formattedDate = `${day}/${month}/${year}`;
   const cardData = [
     {
       image: lost2,
       title: "Bike",
       description: "Lost",
-      dateFound: Date(),
+      dateFound: formattedDate,
     },
     {
       image: lost3,
       title: "Shoes",
       description: "Lost",
-      dateFound: Date(),
+      dateFound: formattedDate,
     },
     {
       image: lost4,
       title: "Bike",
       description: "Lost",
-      dateFound: Date(),
+      dateFound: formattedDate,
     },
     {
       image: lost5,
       title: "Bike",
       description: "Lost",
-      dateFound: Date(),
+      dateFound: formattedDate,
     },
     {
       image: lost6,
       title: "Bike",
       description: "Lost",
-      dateFound: Date(),
+      dateFound: formattedDate,
     },
     {
       image: lost7,
       title: "Bike",
       description: "Lost",
-      dateFound: Date(),
+      dateFound: formattedDate,
     },
     {
       image: lost8,
       title: "Bike",
       description: "Lost",
-      dateFound: Date(),
+      dateFound: formattedDate,
     },
     {
       image: lost9,
       title: "Bike",
       description: "Lost",
-      dateFound: Date(),
+      dateFound: formattedDate,
     },
   ];
   return (
     <div>
       <Row>
         {cardData.map((card, index) => (
-          <Card style={{ width: "18rem" }} className="card" key={index}>
+          <Card
+            style={{ width: "18rem", margin: "2px", borderadius: "5px" }}
+            className="card"
+            key={index}
+          >
             <Card.Img
               variant="top"
               src={card.image}
@@ -77,7 +88,9 @@ function Items() {
               <Card.Text>{card.description}</Card.Text>
               <Card.Text>{card.dateFound}</Card.Text>
 
-              <Button variant="primary">Claim Item</Button>
+              <Button variant="primary" style={{ backgroundColor: "green" }}>
+                Claim Item
+              </Button>
             </Card.Body>
           </Card>
         ))}

@@ -2,19 +2,20 @@
 .home-container {
   position: relative;
   width: 100%;
-  height: 100vh; /* Adjust the height as needed */
+  height: 100vh; 
   overflow: hidden;
   border-radius: 5px;
 }
 
-/* Background image styling */
+
 .img-bg {
-  background: url(../assets/lost1.jpeg) no-repeat center center;
+  background: url(../assets/lost1.png) no-repeat center center;
   background-size: cover;
   width: 100%;
   height: 100%;
   position: relative;
 }
+
 
 /* Description text overlay */
 .description {
