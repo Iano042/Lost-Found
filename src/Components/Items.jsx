@@ -10,55 +10,58 @@ import lost6 from "../assets/lost6.jpeg";
 import lost7 from "../assets/lost7.jpeg";
 import lost8 from "../assets/lost8.jpeg";
 import lost9 from "../assets/lost9.jpg";
+import { Link } from "react-router-dom";
+import { Nav } from "react-bootstrap";
 
 function Items() {
   const cardData = [
     {
       image: lost2,
       title: "Bike",
-      description: "Lost",
+      description:
+        "A modern light blue bike, fully functional with a deflated rear wheel.",
       dateFound: Date(),
     },
     {
       image: lost3,
       title: "Shoes",
-      description: "Lost",
+      description: "A blue sneaker without laces",
       dateFound: Date(),
     },
     {
       image: lost4,
-      title: "Bike",
-      description: "Lost",
+      title: "Watch",
+      description: "Silver Rolex watch and with no defects.",
       dateFound: Date(),
     },
     {
       image: lost5,
-      title: "Bike",
-      description: "Lost",
+      title: "Student ID",
+      description: "E224/64688/2021",
       dateFound: Date(),
     },
     {
       image: lost6,
-      title: "Bike",
-      description: "Lost",
+      title: "Journal Book",
+      description: "Orange ,new in perfect condition. ",
       dateFound: Date(),
     },
     {
       image: lost7,
-      title: "Bike",
-      description: "Lost",
+      title: "Phone",
+      description: "Samsung Galaxy A03,4+64Gb storage",
       dateFound: Date(),
     },
     {
       image: lost8,
-      title: "Bike",
-      description: "Lost",
+      title: "Backpack",
+      description: "Grey,waterproof laptop bag",
       dateFound: Date(),
     },
     {
       image: lost9,
-      title: "Bike",
-      description: "Lost",
+      title: "Glasses",
+      description: "Blue-ray light glasses",
       dateFound: Date(),
     },
   ];
@@ -76,8 +79,11 @@ function Items() {
               <Card.Title>{card.title}</Card.Title>
               <Card.Text>{card.description}</Card.Text>
               <Card.Text>{card.dateFound}</Card.Text>
-
-              <Button variant="primary">Claim Item</Button>
+              <Nav.Link>
+                <Nav.Link as={Link} to="/ClaimItem">
+                  <Button variant="primary">Claim Item</Button>
+                </Nav.Link>
+              </Nav.Link>
             </Card.Body>
           </Card>
         ))}

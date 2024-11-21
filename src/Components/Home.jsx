@@ -9,8 +9,8 @@ function Home() {
     <div className="home-container">
       <div className="img-bg">
         <div className="description">
-          <h1>Description:</h1>
-          <p>Post and Claim Lost Items</p>
+          <h1>Lost Your Item?:</h1>
+          <p>No Need To Worry, We Got You Covered.</p>
         </div>
         <div className="button d-flex justify-content-md-evenly ">
           <Button
