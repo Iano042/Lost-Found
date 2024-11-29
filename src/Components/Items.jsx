@@ -14,54 +14,60 @@ import { Link } from "react-router-dom";
 import { Nav } from "react-bootstrap";
 
 function Items() {
+  const currentDate = new Date();
+
+  const day = currentDate.getDate();
+  const month = currentDate.getMonth() + 1;
+  const year = currentDate.getFullYear();
+
+  const formattedDate = `${day}/${month}/${year}`;
   const cardData = [
     {
       image: lost2,
       title: "Bike",
-      description:
-        "A modern light blue bike, fully functional with a deflated rear wheel.",
+      description: "Lost",
       dateFound: Date(),
     },
     {
       image: lost3,
       title: "Shoes",
-      description: "A blue sneaker without laces",
+      description: "Lost",
       dateFound: Date(),
     },
     {
       image: lost4,
-      title: "Watch",
-      description: "Silver Rolex watch and with no defects.",
+      title: "Bike",
+      description: "Lost",
       dateFound: Date(),
     },
     {
       image: lost5,
-      title: "Student ID",
-      description: "E224/64688/2021",
+      title: "Bike",
+      description: "Lost",
       dateFound: Date(),
     },
     {
       image: lost6,
-      title: "Journal Book",
-      description: "Orange ,new in perfect condition. ",
+      title: "Bike",
+      description: "Lost",
       dateFound: Date(),
     },
     {
       image: lost7,
-      title: "Phone",
-      description: "Samsung Galaxy A03,4+64Gb storage",
+      title: "Bike",
+      description: "Lost",
       dateFound: Date(),
     },
     {
       image: lost8,
-      title: "Backpack",
-      description: "Grey,waterproof laptop bag",
+      title: "Bike",
+      description: "Lost",
       dateFound: Date(),
     },
     {
       image: lost9,
-      title: "Glasses",
-      description: "Blue-ray light glasses",
+      title: "Bike",
+      description: "Lost",
       dateFound: Date(),
     },
   ];
@@ -69,7 +75,11 @@ function Items() {
     <div>
       <Row>
         {cardData.map((card, index) => (
-          <Card style={{ width: "18rem" }} className="card" key={index}>
+          <Card
+            style={{ width: "18rem", margin: "2px", borderadius: "5px" }}
+            className="card"
+            key={index}
+          >
             <Card.Img
               variant="top"
               src={card.image}
@@ -79,11 +89,8 @@ function Items() {
               <Card.Title>{card.title}</Card.Title>
               <Card.Text>{card.description}</Card.Text>
               <Card.Text>{card.dateFound}</Card.Text>
-              <Nav.Link>
-                <Nav.Link as={Link} to="/ClaimItem">
-                  <Button variant="primary">Claim Item</Button>
-                </Nav.Link>
-              </Nav.Link>
+
+              <Button variant="primary">Claim Item</Button>
             </Card.Body>
           </Card>
         ))}
